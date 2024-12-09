@@ -1,0 +1,171 @@
+body{
+    font-family: "Work Sans", sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul, 
+ol, 
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1558px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+}
+
+.header .container{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.head {
+    display: flex; /* Включає flexbox */
+    align-items: center; /* Центрує елементи вертикально */
+    justify-content: center; /* Центрує елементи горизонтально */
+    height: 100vh; /* Наприклад, вся висота вікна браузера */
+}
+
+.nav{
+    display: flex;
+    align-content: center;
+}
+
+.item {
+    margin: 0 10px; /* Додає відступи між елементами */
+    padding: 10px 20px; /* Внутрішні відступи для вигляду */
+    text-align: center; /* Вирівнювання тексту */
+}
+
+
+.hero .container{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    background-color: #F2F0F1;
+    border-radius: 30px;
+}
+
+.hero-main-text{
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 140%;
+    color: #000;
+}
+
+.hero-sub-text{
+    width: 700px;
+}
+
+.login-icon{
+    width: 24px;
+    height: 24px;
+}
+
+.shop-btn{
+    border-radius: 62px;
+    padding: 16px 54px;
+    width: 210px;
+    height: 52px;
+    color: white;
+    background-color: #000;
+}
+
+.stats{
+    display: flex;
+    gap: 30px;
+}
+
+.stats-info{
+    width: 200px;
+}
+
+.sells{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+}
+
+.products {
+    display: flex; 
+    justify-content: center; 
+    gap: 20px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1 1 calc(20% - 10px);
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+.img-container{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #434455;
+}
+
+.product-name{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
