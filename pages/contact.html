@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container head">
+            <a href="./index.html" class="logo">confidente</a>
+            <nav class="nav">
+                <a href="./all-products.html" class="item">Каталог</a>
+                <a href="./news.html" class="item">Новини</a>
+                <a href="./about-us.html" class="item">Про нас</a>
+                <a href="./contact.html" class="item">Контакти</a>
+            </nav>
+            <div class="svg">
+                <a href="./basket.html">
+                    <img src="/images/basket.svg" alt="" class="login-icon">
+                </a>
+                <a href="" class="login">
+                    <img src="/images/login.svg" alt="" class="login-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+         <!-- Contact Section -->
+    <div class="contact-section">
+        <div class="contact-image">
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25187.682312622045!2d24.031708!3d49.8419528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add72e2f8f8f7%3A0x1a0b7d4c0b7adf7b!2z0LLRg9C70LjRhtGPINCb0YzQutC40LvQuNC60LAg0L7QsdC7Liwg0JvRg9C70LjQvdCwLCA3OTAwMA!5e0!3m2!1suk!2sua!4v1640000000000!5m2!1suk!2sua"
+                    allowfullscreen=""
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="contact-details">
+            <h2>Наші Контакти</h2>
+            <p><strong>Адреса:</strong> вул. Краси, 45, Львів, Україна</p>
+            <p><strong>Телефон:</strong> +38 (067) 345-67-89</p>
+            <p><strong>Email:</strong> support@fashionstore.ua</p>
+            <p><strong>Графік роботи:</strong> Пн-Пт: 10:00 - 19:00</p>
+            <p>Ми цінуємо кожного нашого клієнта. Будь ласка, зв'яжіться з нами для отримання додаткової інформації або відвідайте наш магазин для знайомства з колекціями.</p>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h3>Надішліть нам повідомлення</h3>
+        <form>
+            <input type="text" name="name" placeholder="Ваше ім'я" required>
+            <input type="email" name="email" placeholder="Ваш Email" required>
+            <textarea name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+            <button type="submit">Надіслати</button>
+        </form>
+    </div>
+    </section>
+    <footer>
+        <div class="footer-logo footer-column">
+            <h3>confidente</h3>
+            <p>У нас є одяг, що відповідає вашому стилю і яким ви пишаєтеся. Для жінок та чоловіків.</p>
+            <div class="footer-social">
+                <img src="/images/insta.svg" alt="Instagram">
+                <img src="/images/git.svg" alt="Facebook">
+                <img src="/images/twiter.svg" alt="Twitter">
+            </div>
+        </div>
+    
+        <div class="footer-column">
+            <h3>Компанія</h3>
+            <ul>
+                <li><a href="#">Про нас</a></li>
+                <li><a href="#">Особливості</a></li>
+                <li><a href="#">Наші роботи</a></li>
+                <li><a href="#">Кар'єра</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h3>Допомога</h3>
+            <ul>
+                <li><a href="#">Підтримка клієнтів</a></li>
+                <li><a href="#">Деталі доставки</a></li>
+                <li><a href="#">Умови та положення</a></li>
+                <li><a href="#">Політика конфіденційності</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h3>Поширені питання</h3>
+            <ul>
+                <li><a href="#">Обліковий запис</a></li>
+                <li><a href="#">Керування доставками</a></li>
+                <li><a href="#">Замовлення</a></li>
+                <li><a href="#">Платежі</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-column">
+            <h3>Ресурси</h3>
+            <ul>
+                <li><a href="#">Безкоштовні eBooks</a></li>
+                <li><a href="#">Навчальні матеріали для розробників</a></li>
+                <li><a href="#">Блог: Як зробити</a></li>
+                <li><a href="#">YouTube-плейлист</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.querySelector('.contact-form form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Запобігає оновленню сторінки
+                alert('Повідомлення надіслано! Дякуємо, що зв\'язалися з нами.');
+            });
+        });
+    </script>
+</body>
+</html>

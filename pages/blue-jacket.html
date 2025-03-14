@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container head">
+        <a href="./index.html" class="logo">confidente</a>
+        <nav class="nav">
+            <a href="./all-products.html" class="item">Каталог</a>
+            <a href="./news.html" class="item">Новини</a>
+            <a href="./about-us.html" class="item">Про нас</a>
+            <a href="./contact.html" class="item">Контакти</a>
+        </nav>
+        <div class="svg">
+            <a href="./basket.html">
+                <img src="/images/basket.svg" alt="" class="login-icon">
+            </a>
+            <a href="" class="login">
+                <img src="/images/login.svg" alt="" class="login-icon">
+            </a>
+        </div>
+    </div>
+</header>
+    <section class="product-container container">
+            <!-- Ліва частина: зображення -->
+            <div class="images-section">
+                <div class="small-image"><img src="/images/blue-jacket1.jpg" alt=""></div>
+                <div class="small-image"><img src="/images/blue-jacket2.jpg" alt=""></div>
+                <div class="small-image"><img src="/images/blue-jacket3.jpg" alt=""></div>
+            </div>
+
+            <div id="imageModal" class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="modalImage">
+           </div>
+            
+            <!-- Основне зображення -->
+            <div class="main-image">
+                <img src="/images/blue-jacket.jpg" alt="">
+            </div>
+
+            <!-- Права частина: інформація про товар -->
+            <div class="product-details">
+                <h1 class="product-name">Cиня зимова куртка</h1>
+                <div class="rating">
+                    ★★★★★ <span class="nmb-rating">5/5</span>
+                </div>
+                <div class="price">
+                    <span class="current-price">3100₴</span>
+                </div>
+                <p class="description">
+                  Синя зимова куртка – це практичний і стильний варіант верхнього одягу для холодної пори року. Синій колір додає свіжості образу, відмінно поєднується з іншими відтінками та підходить для будь-якого віку й стилю. Завдяки сучасним матеріалам і утеплювачам така куртка забезпечує надійний захист від морозу, вітру та опадів.
+                </p>
+
+                <div class="colors">
+                    <p>Select Colors:</p>
+                    <div class="color-option brown"></div>
+                    <div class="color-option navy"></div>
+                    <div class="color-option green"></div>
+                </div>
+
+                <div class="sizes">
+                    <p>Choose Size</p>
+                    <button class="sizes-btn">Small</button>
+                    <button class="sizes-btn">Medium</button>
+                    <button class="sizes-btn">Large</button>
+                    <button class="sizes-btn">X-Large</button>
+                </div>
+
+                <div class="quantity-cart">
+                    <button class="add-to-cart">КУПИТИ</button>
+                </div>
+            </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          // ===========================
+          // Функціонал "Add to Cart"
+          // ===========================
+          const addToCartBtn = document.querySelector(".add-to-cart"); // Кнопка "Add to Cart"
+      
+          if (addToCartBtn) {
+              addToCartBtn.addEventListener("click", () => {
+                  const productName = document.querySelector(".product-name")?.textContent.trim() || "Товар";
+                  const productPrice = parseFloat(
+                      document.querySelector(".current-price")?.textContent.replace("$", "").trim() || "0"
+                  );
+                  const productSize = document.querySelector(".sizes-btn.active")?.textContent || "Default";
+                  const productColor =
+                      document.querySelector(".color-option.selected")?.classList[1] || "Default";
+                  const productImage = document.querySelector(".main-image img")?.src || "";
+      
+                  const product = {
+                      name: productName,
+                      price: productPrice,
+                      size: productSize,
+                      color: productColor,
+                      image: productImage,
+                      quantity: 1,
+                  };
+      
+                  addToLocalStorage(product);
+              });
+      
+              function addToLocalStorage(product) {
+                  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                  const existingProductIndex = cart.findIndex(
+                      (item) =>
+                          item.name === product.name &&
+                          item.size === product.size &&
+                          item.color === product.color
+                  );
+      
+                  if (existingProductIndex > -1) {
+                      cart[existingProductIndex].quantity += 1;
+                  } else {
+                      cart.push(product);
+                  }
+      
+                  localStorage.setItem("cart", JSON.stringify(cart));
+                  alert("Товар додано до кошика!");
+              }
+          }
+      
+          // ===========================
+          // Вибір кольору
+          // ===========================
+          const colorOptions = document.querySelectorAll(".color-option");
+          colorOptions.forEach((color) => {
+              color.addEventListener("click", () => {
+                  colorOptions.forEach((c) => c.classList.remove("selected"));
+                  color.classList.add("selected");
+              });
+          });
+      
+          // ===========================
+          // Вибір розміру
+          // ===========================
+          const sizeButtons = document.querySelectorAll(".sizes-btn");
+          sizeButtons.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                  sizeButtons.forEach((b) => b.classList.remove("active"));
+                  btn.classList.add("active");
+              });
+          });
+      
+          // ===========================
+          // Функціонал збільшення зображень
+          // ===========================
+          const modal = document.createElement("div");
+          modal.classList.add("modal");
+          modal.style.cssText = `
+              display: none; 
+              position: fixed; 
+              top: 0; left: 0; 
+              width: 100%; height: 100%; 
+              background-color: rgba(0, 0, 0, 0.8); 
+              justify-content: center; 
+              align-items: center; 
+              z-index: 1000;
+          `;
+      
+          const modalImg = document.createElement("img");
+          modalImg.style.cssText = "max-width: 90%; max-height: 90%;";
+      
+          const closeModal = document.createElement("span");
+          closeModal.textContent = "×";
+          closeModal.style.cssText = `
+              position: absolute; 
+              top: 20px; right: 30px; 
+              color: #fff; font-size: 40px; 
+              cursor: pointer; font-weight: bold;
+          `;
+      
+          modal.appendChild(modalImg);
+          modal.appendChild(closeModal);
+          document.body.appendChild(modal);
+      
+          // Обробник подій для зображень
+          const images = document.querySelectorAll(".small-image img");
+          images.forEach((img) => {
+              img.addEventListener("click", () => {
+                  modal.style.display = "flex"; // Показуємо модальне вікно
+                  modalImg.src = img.src;
+              });
+          });
+      
+          // Закриття модального вікна
+          closeModal.addEventListener("click", () => {
+              modal.style.display = "none";
+          });
+      
+          modal.addEventListener("click", (e) => {
+              if (e.target === modal) {
+                  modal.style.display = "none";
+              }
+          });
+      });
+      </script>
+</body>
+</html>

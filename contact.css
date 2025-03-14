@@ -1,0 +1,299 @@
+body{
+    font-family: "Work Sans", sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+    margin: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul, 
+ol, 
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1558px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
+}
+
+.logo{
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+}
+
+.header .container{
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.head {
+    display: flex; /* Включає flexbox */
+    align-items: center; /* Центрує елементи вертикально */
+    justify-content: center; /* Центрує елементи горизонтально */
+    height: 100vh; /* Наприклад, вся висота вікна браузера */
+}
+
+.nav{
+    display: flex;
+    align-content: center;
+}
+
+.item {
+    margin: 0 10px; /* Додає відступи між елементами */
+    padding: 10px 20px; /* Внутрішні відступи для вигляду */
+    text-align: center; /* Вирівнювання тексту */
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.contact-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Секція контактів */
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-details h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.contact-details strong {
+    color: #2980b9;
+}
+
+/* Форма зв'язку */
+.contact-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1f6aa5;
+}
+
+/* Нова секція карти */
+.contact-map {
+    text-align: center;
+}
+
+.contact-map h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact-map iframe {
+    width: 100%;
+    width: 600px;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.svg{
+    display: flex;
+    gap: 10px;
+}
+
+/* Соціальні мережі */
+.contact-social {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-social h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+}
+
+.footer-column {
+    margin: 10px 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000;
+}
+
+.footer-logo p {
+    color: #777;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.footer-payments img {
+    width: 40px;
+    margin: 0 5px;
+}

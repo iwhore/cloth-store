@@ -50,6 +50,11 @@ a {
     color: #000;
 }
 
+.svg{
+    display: flex;
+    gap: 10px;
+}
+
 .header .container{
     height: 120px;
     display: flex;
@@ -78,7 +83,6 @@ a {
 
 .hero .container{
     padding-top: 70px;
-    padding-bottom: 70px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -88,6 +92,8 @@ a {
 }
 
 .hero-main-text{
+    margin-top: 150px;
+    margin-bottom: 60px;
     font-weight: 900;
     font-size: 50px;
     line-height: 140%;
@@ -150,11 +156,12 @@ h2{
     border-radius: 5px; 
 }
 
-.img-container{
-    width: 100%;
-    height: 300px;
+.img-container img{
+    width: 300px;
+    height: 400px;
     border-radius: 20px;
     background-color: #434455;
+    overflow: hidden;
 }
 
 .product-name{
@@ -168,4 +175,174 @@ h2{
     font-weight: 700;
     font-size: 24px;
     color: #000;
+}
+
+@media (max-width: 768px) {
+    .products {
+        flex-wrap: wrap; /* Перенос елементів на новий рядок */
+    }
+    .product {
+        flex: 1 1 calc(50% - 10px); /* Дві колонки */
+        padding: 8px;
+    }
+    .img-container img {
+        width: 200px;
+        height: 300px;
+    }
+    .product-name {
+        font-size: 18px;
+    }
+    .price {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 800px; /* Обмеження ширини контейнера для планшетів */
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-img{
+        display: none;
+    }
+}
+
+/* Для маленьких мобільних пристроїв (ширина екрану до 480px) */
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 100%; /* Одна колонка */
+    }
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+    .product-name {
+        font-size: 16px;
+    }
+    .price {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 100%; /* Контейнер займає всю ширину */
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid #ddd;
+}
+
+.footer-column {
+    margin: 10px 20px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #000;
+}
+
+.footer-logo p {
+    color: #777;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.footer-payments img {
+    width: 40px;
+    margin: 0 5px;
+}
+
+.yep{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hero-img{
+    width: 500px;
+    height: 500px;
+    margin-bottom: 0;
+}
+
+.menu{
+    margin: 0; /* Додає відступи між елементами */
+    text-align: center; /* Вирівнювання тексту */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+.menu {
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block; /* Гарантує, що кожне посилання займає окремий рядок */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Зміна фону при наведенні */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Відображає меню при наведенні */
 }

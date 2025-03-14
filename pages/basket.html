@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/basket.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container head">
+        <a href="./index.html" class="logo">confidente</a>
+        <nav class="nav">
+            <a href="./all-products.html" class="item">Каталог</a>
+            <a href="./news.html" class="item">Новини</a>
+            <a href="./about-us.html" class="item">Про нас</a>
+            <a href="./contact.html" class="item">Контакти</a>
+        </nav>
+        <div class="svg">
+            <a href="./basket.html">
+                <img src="/images/basket.svg" alt="" class="login-icon">
+            </a>
+            <a href="" class="login">
+                <img src="/images/login.svg" alt="" class="login-icon">
+            </a>
+        </div>
+    </div>
+</header>
+    <section class="cart-container">
+        <h1 class="cart-title">YOUR CART</h1>
+        <div class="cart-content">
+          <!-- Список товарів -->
+          <div class="cart-items">
+            <div class="cart-item" data-price="145">
+    
+              <div class="item-details">
+                <h3>Gradient Graphic T-shirt</h3>
+                <p>Size: Large</p>
+                <p>Color: White</p>
+                <p class="item-price">145</p>
+              </div>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+              </div>
+              <button class="delete-btn">🗑</button>
+            </div>
+      
+            <div class="cart-item" data-price="180">
+
+              <div class="item-details">
+                <h3>Checkered Shirt</h3>
+                <p>Size: Medium</p>
+                <p>Color: Red</p>
+                <p class="item-price">$180</p>
+              </div>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+              </div>
+              <button class="delete-btn">🗑</button>
+            </div>
+      
+            <div class="cart-item" data-price="240">
+              <img src="images/jeans.jpg" alt="Skinny Fit Jeans" class="item-img" />
+              <div class="item-details">
+                <h3>Skinny Fit Jeans</h3>
+                <p>Size: Large</p>
+                <p>Color: Blue</p>
+                <p class="item-price">240</p>
+              </div>
+              <div class="quantity-controls">
+                <button class="decrease-btn">-</button>
+                <span class="quantity">1</span>
+                <button class="increase-btn">+</button>
+              </div>
+              <button class="delete-btn">🗑</button>
+            </div>
+          </div>
+      
+          <!-- Підсумок замовлення -->
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+            <div>
+              <p>Загальна ціна: <span id="subtotal">$65</span></p>
+              <p>Знижка (20%): <span id="discount">- 113</span></p>
+              <p>Вартість доставки: <span id="delivery">15</span></p>
+            </div>
+            <hr />
+            <h3>Total: <span id="total">467</span></h3>
+            <div class="promo-code">
+              <input type="text" placeholder="Add promo code" id="promo-code-input" />
+              <button id="apply-promo-btn">Ввести</button>
+            </div>
+            <button class="checkout-btn">Замовити</button>
+          </div>
+        </div>
+    </section>
+    <footer>
+      <div class="footer-logo footer-column">
+          <h3>confidente</h3>
+          <p>У нас є одяг, що відповідає вашому стилю і яким ви пишаєтеся. Для жінок та чоловіків.</p>
+          <div class="footer-social">
+              <img src="/images/insta.svg" alt="Instagram">
+              <img src="/images/git.svg" alt="Facebook">
+              <img src="/images/twiter.svg" alt="Twitter">
+          </div>
+      </div>
+  
+      <div class="footer-column">
+          <h3>Компанія</h3>
+          <ul>
+              <li><a href="#">Про нас</a></li>
+              <li><a href="#">Особливості</a></li>
+              <li><a href="#">Наші роботи</a></li>
+              <li><a href="#">Кар'єра</a></li>
+          </ul>
+      </div>
+  
+      <div class="footer-column">
+          <h3>Допомога</h3>
+          <ul>
+              <li><a href="#">Підтримка клієнтів</a></li>
+              <li><a href="#">Деталі доставки</a></li>
+              <li><a href="#">Умови та положення</a></li>
+              <li><a href="#">Політика конфіденційності</a></li>
+          </ul>
+      </div>
+  
+      <div class="footer-column">
+          <h3>Поширені питання</h3>
+          <ul>
+              <li><a href="#">Обліковий запис</a></li>
+              <li><a href="#">Керування доставками</a></li>
+              <li><a href="#">Замовлення</a></li>
+              <li><a href="#">Платежі</a></li>
+          </ul>
+      </div>
+  
+      <div class="footer-column">
+          <h3>Ресурси</h3>
+          <ul>
+              <li><a href="#">Безкоштовні eBooks</a></li>
+              <li><a href="#">Навчальні матеріали для розробників</a></li>
+              <li><a href="#">Блог: Як зробити</a></li>
+              <li><a href="#">YouTube-плейлист</a></li>
+          </ul>
+      </div>
+  </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const cartItemsContainer = document.getElementById("cart-items");
+          const subtotalElement = document.getElementById("subtotal");
+          const totalElement = document.getElementById("total");
+          let subtotal = 0;
+      
+          // Отримуємо дані кошика з localStorage
+          const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
+          // Функція для відображення товарів у кошику
+          cart.forEach((item, index) => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.innerHTML = `
+              <div class="item-details">
+                <h3>${item.name}</h3>
+                <p>Size: ${item.size}</p>
+                <p>Color: ${item.color}</p>
+                <p class="item-price">${item.price}₴</p>
+              </div>
+              <button class="delete-btn" data-index="${index}">🗑</button>
+            `;
+            cartItemsContainer.appendChild(cartItem);
+            subtotal += item.price;
+          });
+      
+          // Оновлюємо підсумок
+          subtotalElement.textContent = `${subtotal}₴`;
+          totalElement.textContent = `${subtotal}₴`;
+      
+          // Функція для видалення товару
+          document.querySelectorAll(".delete-btn").forEach((button) => {
+            button.addEventListener("click", (event) => {
+              const index = event.target.dataset.index;
+              cart.splice(index, 1);
+              localStorage.setItem("cart", JSON.stringify(cart));
+              location.reload(); // Перезавантажуємо сторінку
+            });
+          });
+        });
+      </script>
+    <script src="/main.js"></script>
+</body>
+</html>
